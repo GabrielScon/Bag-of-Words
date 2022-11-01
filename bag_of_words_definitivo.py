@@ -60,7 +60,7 @@ def unir(sequence):
     return [a for a in sequence if not (a in b or b.add(a))]
 
 vcb = unir(sentensas1 + sentensas2 + sentensas3 + sentensas4 + sentensas5)
-vocabulario=[sentensas1 + sentensas2 + sentensas3 + sentensas4 + sentensas5]
+vocabulario=[]
 
 for s in vcb: 
     if s not in stopwords and s not in pontuaçao: 
