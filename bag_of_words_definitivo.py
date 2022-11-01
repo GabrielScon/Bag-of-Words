@@ -57,14 +57,14 @@ def vetorizar(sentensas):
 
 def unir(sequence):
     b = set()
-    return [x for x in sequence if not (x in b or b.add(x))]
+    return [a for a in sequence if not (a in b or b.add(a))]
 
 vcb = unir(sentensas1 + sentensas2 + sentensas3 + sentensas4 + sentensas5)
 vocabulario=[sentensas1 + sentensas2 + sentensas3 + sentensas4 + sentensas5]
 
-for w in vcb: 
-    if w not in stopwords and w not in pontuaçao: 
-       vocabulario.append(w)
+for s in vcb: 
+    if s not in stopwords and s not in pontuaçao: 
+       vocabulario.append(s)
 
 vetor1=vetorizar(sentensas1)
 vetor2=vetorizar(sentensas2) 
