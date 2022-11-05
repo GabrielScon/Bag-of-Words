@@ -36,11 +36,11 @@ sp4 = BeautifulSoup(html4.text,"html.parser").find("p").get_text()
 sp5 = BeautifulSoup(html5.text,"html.parser").find("p").get_text()
 
 stopwords=["to","is","a"]
-pontuaçao=[",",":"," ",";",".","?"]
+pontuaçao=[",",":"," ",";",".","?","(",")"]
 
 def sentensas_palavras(sentensas):
   palavras = spa(sentensas)
-  return [palavras.orth_ for palavras in palavras if not palavras.is_punct]
+  return [palavras.orth_ for palavras in palavras]
 
 sentensas1 = sentensas_palavras(sp1)
 sentensas2 = sentensas_palavras(sp2)
